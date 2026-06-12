@@ -2,7 +2,7 @@
   "$schema": "https://dl.viam.dev/module.schema.json",
   "module_id": "mattmacf:dataset-camera",
   "visibility": "public",
-  "url": "",
+  "url": "https://github.com/mattmacf98/dataset-camera",
   "description": "Modular camera component: dataset-camera",
   "applications": null,
   "markdown_link": "README.md",
