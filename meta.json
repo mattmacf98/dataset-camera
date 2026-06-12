@@ -12,6 +12,10 @@
     {
       "api": "rdk:component:camera",
       "model": "mattmacf:dataset-camera:dataset-camera"
+    },
+    {
+      "api": "rdk:service:vision",
+      "model": "mattmacf:dataset-camera:dumb-vs"
     }
   ],
   "build": {

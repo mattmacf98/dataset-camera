@@ -237,12 +237,14 @@ func (s *datasetCameraDatasetCamera) Images(
 		capturedAt = binData.Metadata.TimeReceived
 	}
 
-	return []camera.NamedImage{namedImage}, resource.ResponseMetadata{CapturedAt: capturedAt, Attributes: map[string]interface{}{
+	attributes := map[string]interface{}{
 		"dataset_id": s.cfg.DatasetID,
 		"latitude":   12,
 		"longitude":  50,
 		"altitude":   100,
-	}}, nil
+	}
+	s.logger.Infof("setting attributes: %v", attributes)
+	return []camera.NamedImage{namedImage}, resource.ResponseMetadata{CapturedAt: capturedAt, Attributes: attributes}, nil
 }
 
 func (s *datasetCameraDatasetCamera) NextPointCloud(ctx context.Context, extra map[string]interface{}) (pointcloud.PointCloud, error) {
